@@ -59,17 +59,17 @@ endif
 # 
 
 ifeq ($(MAKECMDGOALS),release)
-CFLAGS         +=-O2  -fno-gcse -fno-optimize-sibling-calls -Wno-write-strings
-CXXFLAGS       +=-O2  -fno-gcse -fno-optimize-sibling-calls -Wno-write-strings -std=c++11
+CFLAGS         +=-O2  -fno-gcse -fno-optimize-sibling-calls -Wno-unused-but-set-variable -Wno-write-strings 
+CXXFLAGS       +=-O2  -fno-gcse -fno-optimize-sibling-calls -Wno-unused-but-set-variable -Wno-write-strings -std=c++11
 CDEFINES       += 
 CXXDEFINES     +=  
 endif
 
 
 ifeq ($(MAKECMDGOALS),debug)
-CFLAGS      +=-g -Wall -fno-inline
+CFLAGS      +=-g -Wall -fno-inline -Wno-unused-but-set-variable
 CDEFINES    +=-D_DEBUG
-CXXFLAGS    +=-g -Wall -fno-inline -std=c++11
+CXXFLAGS    +=-g -Wall -fno-inline -Wno-unused-but-set-variable -std=c++11 
 CXXDEFINES  +=-D_DEBUG 
 endif
 
@@ -140,4 +140,8 @@ endif
 # Added specification of fftw3 library: Modify appropriately
 # for different fftw3 installations, or comment out to avoid
 # their inclusion. 
+
+# (10/7/2016)
+# Added -Wno-unused-but-set-variable
+#
 
