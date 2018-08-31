@@ -23,6 +23,8 @@
 #                   compile the sources, in the form 
 #                   -Idir1 -Idir2 ...
 #
+#
+$
 # DEBUG_LIBRARY   : The name of the target debug library
 # RELEASE_LIBRARY : The name of the target release library
 # COMMON_INCLUDE  : The name of the common include directory (optional)
@@ -56,8 +58,14 @@
 # Verson: Wed Nov 25 19:56:12 2015 -0800
 
 VPATH        += $(SRC_DIR) 
+
+ifndef RELEASE_DIR
 RELEASE_DIR  := ./_release
+endif
+
+ifndef DEBUG_DIR
 DEBUG_DIR    := ./_debug
+endif
 
 ifndef VERBOSE
 QUIET     :=@
