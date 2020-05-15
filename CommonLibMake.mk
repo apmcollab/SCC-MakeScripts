@@ -24,7 +24,6 @@
 #                   -Idir1 -Idir2 ...
 #
 #
-$
 # DEBUG_LIBRARY   : The name of the target debug library
 # RELEASE_LIBRARY : The name of the target release library
 # COMMON_INCLUDE  : The name of the common include directory (optional)
