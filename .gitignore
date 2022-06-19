@@ -4,6 +4,7 @@ _debug*
 *.exe
 push*
 BaseCommonConfig.mk
+CommonConfig.mk
 .hg
 .hgignore
 .hgsub
