@@ -4,5 +4,5 @@
 
 void Sample_2_Class::displayResult()
 {
-   std::cout << "Successful build of Sample_2 Executable" << std::endl;
+   std::::cout << "Successful build of Sample_2 Executable" << std::endl;
 }
